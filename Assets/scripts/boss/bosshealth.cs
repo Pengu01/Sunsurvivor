@@ -33,18 +33,14 @@ public class bosshealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        while (collision.tag == "bullet")
+
+        if(collision.tag == "bullet")
+
         {
-
-
-            if (collision.tag == "bullet")
-
-            {
-                currenthealth = maxhealthfase1;
-                currenthealth -= damageamount;
-                Debug.Log("health is " + currenthealth);
-
-            }
+            currenthealth = maxhealthfase1;
+            currenthealth -= damageamount;
+            Debug.Log("health is " + currenthealth);
+            
         }
     }
 
