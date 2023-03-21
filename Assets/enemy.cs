@@ -12,6 +12,7 @@ public class enemy : MonoBehaviour
         if(collision.tag == "bullet")
         {
             Destroy(collision.gameObject);
+            Instantiate(explosion, transform.position, Quaternion.identity);
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
@@ -24,10 +25,6 @@ public class enemy : MonoBehaviour
     private void Update()
     {
         transform.position = new Vector2(-speed*Time.deltaTime+transform.position.x, transform.position.y);
-        if (transform.position.y < -2) Destroy(gameObject);
-    }
-    private void OnDestroy()
-    {
-        Instantiate(explosion, transform.position, Quaternion.identity);
+        if (transform.position.x < -3) Destroy(gameObject);
     }
 }
