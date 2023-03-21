@@ -19,7 +19,7 @@ public class enemyspawn : MonoBehaviour
         enemyspawntimer -= Time.deltaTime;
         if(enemyspawntimer < 0)
         {
-            float randomfloat = UnityEngine.Random.Range(-901, 900);
+            float randomfloat = UnityEngine.Random.Range(-659, 632);
             Instantiate(enemy, new Vector2(transform.position.x, randomfloat /1000),Quaternion.identity);
             enemyspawntimer = enemyspawner;
         }
