@@ -7,6 +7,7 @@ public class bullet : MonoBehaviour
 {
     public Sprite sprite;
     public float speed;
+    public GameObject hit;
     float timer;
     void Update()
     {
@@ -14,5 +15,9 @@ public class bullet : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > 0.25f) gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
         if (timer > 5.0f) Destroy(gameObject);
+    }
+    private void OnDestroy()
+    {
+        Instantiate(hit, transform.position, Quaternion.identity);
     }
 }
