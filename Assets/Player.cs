@@ -9,11 +9,16 @@ public class Player : MonoBehaviour
     public Sprite[] sprites;
     public GameObject bullet;
     public float reload;
+    public AudioClip shoot;
     float reloadtimer;
+    private AudioSource audioSource;
+
     private void Start()
     {
         reloadtimer = reload;
+        audioSource = GetComponent<AudioSource>();
     }
+
     void Update()
     {
         float h = Input.GetAxisRaw("Horizontal");
@@ -29,8 +34,9 @@ public class Player : MonoBehaviour
         reload -= Time.deltaTime;
         if (Input.GetButton("Jump") && reload < 0f)
         {
-            Instantiate(bullet, new Vector2 (transform.position.x+0.2f, transform.position.y), Quaternion.identity);
+            Instantiate(bullet, new Vector2(transform.position.x + 0.2f, transform.position.y), Quaternion.identity);
             reload = reloadtimer;
+            audioSource.PlayOneShot(shoot);
         }
     }
 }
