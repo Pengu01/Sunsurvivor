@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
+    
     public Sprite sprite;
     public float speed;
     float timer;
@@ -15,4 +16,6 @@ public class bullet : MonoBehaviour
         if (timer > 0.25f) gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
         if (timer > 5.0f) Destroy(gameObject);
     }
+
+   
 }
