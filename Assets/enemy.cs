@@ -24,7 +24,7 @@ public class enemy : MonoBehaviour
     private void Update()
     {
         transform.position = new Vector2(-speed*Time.deltaTime+transform.position.x, transform.position.y);
-        if (transform.position.y < -2) Destroy(gameObject);
+        if (transform.position.x < -3) Destroy(gameObject);
     }
     private void OnDestroy()
     {
