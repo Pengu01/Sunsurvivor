@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class backg : MonoBehaviour
 {
-    public float spacing;
+    float spacing;
     void Update()
     {
         spacing -= (0.1f * Time.deltaTime);

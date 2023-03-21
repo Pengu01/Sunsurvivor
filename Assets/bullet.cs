@@ -13,6 +13,6 @@ public class bullet : MonoBehaviour
         transform.position = new Vector2(transform.position.x + Time.deltaTime * speed, transform.position.y);
         timer += Time.deltaTime;
         if (timer > 0.25f) gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
-        if (timer > 10.0f) Destroy(gameObject);
+        if (timer > 5.0f) Destroy(gameObject);
     }
 }
