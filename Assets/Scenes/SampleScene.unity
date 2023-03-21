@@ -473,6 +473,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 10af89f5b9af24605a83d05e21dfdeb5, type: 3}
   - {fileID: 21300000, guid: 65019c4b741d6493d97d4072eff8e23b, type: 3}
   - {fileID: 21300000, guid: 4f3ca6c2ba5724c4c90aee322cf79137, type: 3}
+  bullet: {fileID: 1467980642807321419, guid: 6dfcfe4e745f7034c86e218b8e6022d7, type: 3}
+  reload: 0.5
 --- !u!1 &1115331596
 GameObject:
   m_ObjectHideFlags: 0
