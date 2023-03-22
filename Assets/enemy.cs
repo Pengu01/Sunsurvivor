@@ -34,8 +34,10 @@ public class enemy : MonoBehaviour
         if (collision.tag == "Player")
         {
             Instantiate(explosion, collision.transform.position, Quaternion.identity);
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
             audioSource.PlayOneShot(explosionSound);
+            GameObject timer = GameObject.Find("Timer");
+            timer.GetComponent<Timer>().alive = false;
         }
         if(collision.tag == "asteroid")
         {

@@ -7,7 +7,7 @@ public class backg : MonoBehaviour
     float spacing;
     void Update()
     {
-        spacing -= (0.1f * Time.deltaTime);
+        spacing -= (0.1f * Time.unscaledDeltaTime);
         transform.position = new Vector2(spacing, transform.position.y);
         if (spacing < -4.08f) spacing += 4.08f;
     }

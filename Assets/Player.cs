@@ -11,8 +11,7 @@ public class Player : MonoBehaviour
     public float reload;
     public AudioClip shoot;
     float reloadtimer;
-    private AudioSource audioSource;
-    
+    private AudioSource audioSource;    
     private void Start()
     {
         reloadtimer = reload;

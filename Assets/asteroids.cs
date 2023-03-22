@@ -15,8 +15,8 @@ public class asteroids : MonoBehaviour
     public float eventtimer;
     float starttimer = 10.0f;
     public GameObject asteroid;
-    string warning = "ASTEROIDS! INBOUND!";
-    string warning2 = "DAMAGED! RADAR!";
+    string warning = "ASTEROIDS INBOUND";
+    string warning2 = "DAMAGED RADAR";
     public float repeattimer;
     Text text;
     int count = 0;
@@ -37,7 +37,7 @@ public class asteroids : MonoBehaviour
         {
             eventtimer -= Time.deltaTime;
         }
-        if(eventtimer < 0 && lights.GetComponent<Light2D>().intensity == 0.5f)
+        if(eventtimer < 0 && lights.GetComponent<Light2D>().intensity == 0.5f)//if you get an error on Light2D and .Universal its a bug and it works fine
         {
             if (UnityEngine.Random.Range(0, 6) == 1 && !asteroidss && !darkness)
             {

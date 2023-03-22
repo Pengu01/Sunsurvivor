@@ -9,6 +9,8 @@ public class falling : MonoBehaviour
     public GameObject explosion;
     public GameObject text;
     public Canvas canvas;
+    private AudioSource audioSource;
+    public AudioClip explosionSound;
     private void Update()
     {
     rotation += Time.deltaTime*20;
@@ -16,6 +18,7 @@ public class falling : MonoBehaviour
     }
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         GameObject tempObject = GameObject.Find("Canvas");
         if (tempObject != null)
         {
@@ -31,7 +34,10 @@ public class falling : MonoBehaviour
         if(collision.tag == "Player")
         {
             Instantiate(explosion, collision.transform.position, Quaternion.identity);
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
+            audioSource.PlayOneShot(explosionSound);
+            GameObject timer = GameObject.Find("Timer");
+            timer.GetComponent<Timer>().alive = false;
         }
         if (collision.tag == "bullet")
         {
