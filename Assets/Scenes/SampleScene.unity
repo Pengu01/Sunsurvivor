@@ -137,6 +137,11 @@ GameObject:
   - component: {fileID: 75394416}
   - component: {fileID: 75394415}
   - component: {fileID: 75394419}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 75394420}
+  - component: {fileID: 75394421}
+>>>>>>> main
   m_Layer: 0
   m_Name: vehicle-1
   m_TagString: Untagged
@@ -275,8 +280,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75394414}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 1.362, y: 0.063, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+=======
+  m_LocalPosition: {x: 1.036, y: 0.063, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+>>>>>>> main
   m_Children:
   - {fileID: 579016260}
   - {fileID: 625100062}
@@ -298,8 +308,46 @@ MonoBehaviour:
   damageamount: 1
   maxhealthfase1: 25
   currenthealth: 0
+<<<<<<< HEAD
 =======
->>>>>>> parent of 370b155 (Merge pull request #9 from Pengu01/alfons)
+  weapon: {fileID: 579016259}
+  weapon2: {fileID: 625100061}
+  fase1: {fileID: 75394414}
+--- !u!95 &75394420
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75394414}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b0a3dc825c22f1148bcb9135b680e288, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &75394421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75394414}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c79daba9a5418f74a84171e46337dba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  frequency: 1
+  magnitude: 0.5
+>>>>>>> main
 --- !u!1 &274665686
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,7 +594,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &579016259
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,8 +684,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 9175041890366167687, guid: 15a15304ee3bbad42abaf63d7be85ea5, type: 3}
   bulletPos: {fileID: 625100062}
-=======
->>>>>>> parent of 370b155 (Merge pull request #9 from Pengu01/alfons)
 --- !u!1 &907687470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,85 +1467,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45cad04f1d21fff49b22ca463a1c923e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-=======
---- !u!1 &1801228010
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1801228011}
-  - component: {fileID: 1801228013}
-  - component: {fileID: 1801228012}
-  m_Layer: 5
-  m_Name: Score
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1801228011
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1801228010}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1115331600}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -65.4, y: -53.7}
-  m_SizeDelta: {x: 1000, y: 200}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1801228012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1801228010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 83686dfff70af6848b2d05849fd9bfc7, type: 3}
-    m_FontSize: 300
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 300
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
---- !u!222 &1801228013
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1801228010}
-  m_CullTransparentMesh: 1
->>>>>>> parent of 370b155 (Merge pull request #9 from Pengu01/alfons)
