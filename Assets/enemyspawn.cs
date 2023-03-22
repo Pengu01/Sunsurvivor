@@ -21,7 +21,7 @@ public class enemyspawn : MonoBehaviour
         enemyspawntimer -= Time.deltaTime;
         if(enemyspawntimer < 0)
         {
-            if(UnityEngine.Random.Range(0, 4) == 2 && count == 0)
+            if(UnityEngine.Random.Range(0, 3) == 2 && count == 0)
             {
                 count = UnityEngine.Random.Range(1, 5);
             }
@@ -34,7 +34,7 @@ public class enemyspawn : MonoBehaviour
             }
             else
             {
-                enemyspawntimer = enemyspawner * randomfloat2 / 270;
+                enemyspawntimer = enemyspawner * randomfloat2 / 300;
                 count--;
             }
         }

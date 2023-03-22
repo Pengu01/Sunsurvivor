@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class enemy : MonoBehaviour
 {
@@ -10,9 +13,14 @@ public class enemy : MonoBehaviour
     public AudioClip hit;
     public AudioClip explosionSound;
     private AudioSource audioSource;
+    public GameObject highscore;
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+    }
+    private void Awake()
+    {
+        highscore = GameObject.Find("Score");
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -23,6 +31,7 @@ public class enemy : MonoBehaviour
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             audioSource.PlayOneShot(hit);
+            highscore.GetComponent<Text>().text = (Convert.ToInt32(highscore.GetComponent<Text>().text) + 10).ToString();
         }
         if (collision.tag == "Player")
         {
