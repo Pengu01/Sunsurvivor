@@ -17,9 +17,6 @@ public class enemy : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-    }
-    private void Awake()
-    {
         highscore = GameObject.Find("Score");
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,7 +28,8 @@ public class enemy : MonoBehaviour
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             audioSource.PlayOneShot(hit);
-            highscore.GetComponent<Text>().text = (Convert.ToInt32(highscore.GetComponent<Text>().text) + 10).ToString();
+            string score = (Convert.ToInt32(highscore.GetComponent<Text>().text) + 10).ToString();
+            highscore.GetComponent<Text>().text = score;
         }
         if (collision.tag == "Player")
         {

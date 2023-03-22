@@ -1,8 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
+using System.Runtime.Serialization;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class asteroids : MonoBehaviour
 {
@@ -15,6 +20,8 @@ public class asteroids : MonoBehaviour
     Text text;
     int count = 0;
     public bool asteroidss = false;
+    public GameObject lights;
+    SerializedProperty intense;
     private void Start()
     {
         eventtimer = eventrepeat;
@@ -30,10 +37,17 @@ public class asteroids : MonoBehaviour
         }
         if(eventtimer < 0)
         {
-            if (UnityEngine.Random.Range(0, 4) == 1 && !asteroidss)
+            lights.GetComponent<Light2D>().intensity = 0.5f;
+            if (UnityEngine.Random.Range(0, 8) == 1 && !asteroidss)
             {
                 repeattimer = 1.0f;
                 asteroidss = true;
+            }
+            eventtimer = eventrepeat;
+            if (UnityEngine.Random.Range(0, 8) == 1 && !asteroidss)
+            {
+                eventtimer = UnityEngine.Random.Range(10, 20);
+                lights.GetComponent<Light2D>().intensity = 0.1f;
             }
             eventtimer = eventrepeat;
         }
