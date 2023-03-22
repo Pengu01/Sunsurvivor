@@ -12,11 +12,10 @@ public class enemy : MonoBehaviour
     public GameObject explosion;
     public AudioClip hit;
     public AudioClip explosionSound;
-    private AudioSource audioSource;
+    public AudioSource[] audioSources;
     public GameObject highscore;
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
         highscore = GameObject.Find("Score");
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,7 +26,7 @@ public class enemy : MonoBehaviour
             Instantiate(explosion, transform.position, Quaternion.identity);
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            audioSource.PlayOneShot(hit);
+            audioSources[0].PlayOneShot(hit);
             string score = (Convert.ToInt32(highscore.GetComponent<Text>().text) + 10).ToString();
             highscore.GetComponent<Text>().text = score;
         }
@@ -35,7 +34,7 @@ public class enemy : MonoBehaviour
         {
             Instantiate(explosion, collision.transform.position, Quaternion.identity);
             collision.gameObject.SetActive(false);
-            audioSource.PlayOneShot(explosionSound);
+            audioSources[1].PlayOneShot(explosionSound);
             GameObject timer = GameObject.Find("Timer");
             timer.GetComponent<Timer>().alive = false;
         }
@@ -44,11 +43,17 @@ public class enemy : MonoBehaviour
             Instantiate(explosion, transform.position, Quaternion.identity);
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            audioSources[0].PlayOneShot(hit);
         }
     }
     private void Update()
     {
         transform.position = new Vector2(-speed*Time.deltaTime+transform.position.x, transform.position.y);
         if (transform.position.x < -3) Destroy(gameObject);
+    }
+    public void sfxcontrol(System.Single vol)
+    {
+        audioSources[0].volume = vol;
+        audioSources[1].volume = vol;
     }
 }

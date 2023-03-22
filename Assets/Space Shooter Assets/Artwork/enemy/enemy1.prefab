@@ -170,6 +170,9 @@ MonoBehaviour:
   explosion: {fileID: 9105077993932749958, guid: 71d7656b270f32541819caa5f1ad097e, type: 3}
   hit: {fileID: 8300000, guid: 5a734bcdccebe4d0aa169e4bc43d5210, type: 3}
   explosionSound: {fileID: 8300000, guid: eeac7ff7e4ad44587b11429a7e7b8fc1, type: 3}
+  audioSources:
+  - {fileID: 6085064413359442459}
+  - {fileID: -9169555605106213465}
   highscore: {fileID: 0}
 --- !u!82 &6085064413359442459
 AudioSource:
@@ -183,7 +186,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5a734bcdccebe4d0aa169e4bc43d5210, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.52740043
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -279,7 +282,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eeac7ff7e4ad44587b11429a7e7b8fc1, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.52740043
   m_Pitch: 1
   Loop: 0
   Mute: 0

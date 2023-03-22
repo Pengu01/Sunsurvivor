@@ -102,6 +102,7 @@ MonoBehaviour:
   explosion: {fileID: 9105077993932749958, guid: 71d7656b270f32541819caa5f1ad097e, type: 3}
   text: {fileID: 3885733160820670416, guid: 6c4b8d701f0251f4c90ddf57f683e5ac, type: 3}
   canvas: {fileID: 0}
+  audioSource: {fileID: 1498657117269613262}
   explosionSound: {fileID: 8300000, guid: eeac7ff7e4ad44587b11429a7e7b8fc1, type: 3}
 --- !u!61 &-6570462322291851385
 BoxCollider2D:
@@ -116,7 +117,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.001480103, y: 0.005921602}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -127,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.35, y: 0.37}
+  m_Size: {x: 0.2345314, y: 0.3048632}
   m_EdgeRadius: 0
 --- !u!50 &-1749817653125623818
 Rigidbody2D:
@@ -175,7 +176,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eeac7ff7e4ad44587b11429a7e7b8fc1, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.52740043
   m_Pitch: 1
   Loop: 0
   Mute: 0

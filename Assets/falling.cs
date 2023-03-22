@@ -9,7 +9,7 @@ public class falling : MonoBehaviour
     public GameObject explosion;
     public GameObject text;
     public Canvas canvas;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     public AudioClip explosionSound;
     private void Update()
     {
@@ -18,7 +18,6 @@ public class falling : MonoBehaviour
     }
     private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
         GameObject tempObject = GameObject.Find("Canvas");
         if (tempObject != null)
         {
@@ -43,5 +42,9 @@ public class falling : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+    }
+    public void sfxcontrol(System.Single vol)
+    {
+        audioSource.volume = vol;
     }
 }
