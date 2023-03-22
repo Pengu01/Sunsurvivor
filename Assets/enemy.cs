@@ -21,6 +21,12 @@ public class enemy : MonoBehaviour
             Instantiate(explosion, collision.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
         }
+        if(collision.tag == "asteroid")
+        {
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
     private void Update()
     {
