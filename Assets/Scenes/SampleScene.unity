@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9777cab60bb2e042a41b670744f791e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventrepeat: 5
+  eventrepeat: 7.5
   eventtimer: 0
   asteroid: {fileID: 1509658219619951370, guid: 446321bda1a49874da7fb47d44a75640, type: 3}
   repeattimer: 0
