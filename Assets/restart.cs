@@ -28,5 +28,7 @@ public class restart : MonoBehaviour
         }
         player.transform.position = Vector3.zero;
         player.SetActive(true);
+        player.GetComponent<Player>().speed = 1.0f;
+        player.GetComponent<Player>().reload = 0.5f;
     }
 }

@@ -8,12 +8,14 @@ using UnityEngine.UI;
 
 public class enemy : MonoBehaviour
 {
-    public float speed;
+    public float speed = 1.0f;
     public GameObject explosion;
     public AudioClip hit;
     public AudioClip explosionSound;
     public AudioSource[] audioSources;
     public GameObject highscore;
+    public GameObject speedup;
+    public GameObject reloadup;
     private void Start()
     {
         highscore = GameObject.Find("Score");
@@ -29,6 +31,18 @@ public class enemy : MonoBehaviour
             audioSources[0].PlayOneShot(hit);
             string score = (Convert.ToInt32(highscore.GetComponent<Text>().text) + 10).ToString();
             highscore.GetComponent<Text>().text = score;
+            int tempint = UnityEngine.Random.Range(3, 11);
+            if (tempint == 10 || tempint == 9)
+            {
+                if(tempint == 10)
+                {
+                    Instantiate(speedup, transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(reloadup, transform.position, Quaternion.identity);
+                }
+            }
         }
         if (collision.tag == "Player")
         {

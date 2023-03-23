@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1339e8f42ccbd46acc9cbb66bea145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.05
   explosion: {fileID: 9105077993932749958, guid: 71d7656b270f32541819caa5f1ad097e, type: 3}
   hit: {fileID: 8300000, guid: 5a734bcdccebe4d0aa169e4bc43d5210, type: 3}
   explosionSound: {fileID: 8300000, guid: eeac7ff7e4ad44587b11429a7e7b8fc1, type: 3}
@@ -174,6 +174,8 @@ MonoBehaviour:
   - {fileID: 6085064413359442459}
   - {fileID: -9169555605106213465}
   highscore: {fileID: 0}
+  speedup: {fileID: 1866842402592685336, guid: de38fbf23192c4643be2606f43205357, type: 3}
+  reloadup: {fileID: 4900759177112662679, guid: 56a46377f05b29b468a4051c8c4978fc, type: 3}
 --- !u!82 &6085064413359442459
 AudioSource:
   m_ObjectHideFlags: 0
@@ -186,7 +188,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5a734bcdccebe4d0aa169e4bc43d5210, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.52740043
+  m_Volume: 0.59299517
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -282,7 +284,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eeac7ff7e4ad44587b11429a7e7b8fc1, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.52740043
+  m_Volume: 0.59299517
   m_Pitch: 1
   Loop: 0
   Mute: 0

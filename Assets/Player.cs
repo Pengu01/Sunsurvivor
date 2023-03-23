@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public float speed;
+    public float speed = 1.0f;
     public Sprite[] sprites;
     public GameObject bullet;
-    public float reload;
+    public float reload = 0.5f;
     public AudioClip shoot;
     float reloadtimer;
     public AudioSource[] audioSources;   
@@ -54,5 +54,18 @@ public class Player : MonoBehaviour
     public void musiccontrol(System.Single vol)
     {
         audioSources[0].volume = vol;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "speed")
+        {
+            speed = speed + 0.05f;
+            Destroy(collision.gameObject);
+        }
+        if (collision.tag == "reload")
+        {
+            reloadtimer = reloadtimer * 0.95f;
+            Destroy(collision.gameObject);
+        }
     }
 }

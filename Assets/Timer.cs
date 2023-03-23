@@ -9,11 +9,12 @@ public class Timer : MonoBehaviour
 {
     float timer;
     Text text;
-    int seconds;
+    float seconds;
     public bool alive = true;
     bool reset = false;
     GameObject highscore;
     public GameObject restart;
+    public GameObject enemy;
     void Start()
     {
         text = gameObject.GetComponent<Text>();
@@ -36,6 +37,7 @@ public class Timer : MonoBehaviour
             {
                 timer -= 1.0f;
                 seconds++;
+                enemy.GetComponent<enemy>().speed = 1.0f + 1.0f * (seconds/200);
                 string score = (Convert.ToInt32(highscore.GetComponent<Text>().text) + 5).ToString();
                 highscore.GetComponent<Text>().text = score;
                 if (seconds < 10)
