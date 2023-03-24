@@ -6,6 +6,7 @@ public class restart : MonoBehaviour
 {
     public GameObject[] texts;
     public GameObject player;
+    public asteroids events;
     private void OnMouseDown()
     {
         texts[0].GetComponent<Timer>().alive = true;
@@ -26,9 +27,24 @@ public class restart : MonoBehaviour
         {
             Destroy(asteroid);
         }
+        GameObject[] speed = GameObject.FindGameObjectsWithTag("speed");
+        foreach (GameObject speeds in speed)
+        {
+            Destroy(speeds);
+        }
+        GameObject[] reload = GameObject.FindGameObjectsWithTag("reload");
+        foreach (GameObject reloads in reload)
+        {
+            Destroy(reloads);
+        }
+        events.darkness = false;
+        events.asteroidss = false;
+        events.eventtimer = events.eventrepeat;
+        events.starttimer = 10.0f;
+        events.repeattimer = 0.5f;
         player.transform.position = Vector3.zero;
         player.SetActive(true);
         player.GetComponent<Player>().speed = 1.0f;
-        player.GetComponent<Player>().reload = 0.5f;
+        player.GetComponent<Player>().reloadtimer = 0.5f;
     }
 }

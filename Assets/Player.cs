@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     public GameObject bullet;
     public float reload = 0.5f;
     public AudioClip shoot;
-    float reloadtimer;
+    public float reloadtimer;
     public AudioSource[] audioSources;   
     public Slider music;
     public Slider sfx;

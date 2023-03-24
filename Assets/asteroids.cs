@@ -13,7 +13,7 @@ public class asteroids : MonoBehaviour
 {
     public float eventrepeat;
     public float eventtimer;
-    float starttimer = 10.0f;
+    public float starttimer = 10.0f;
     public GameObject asteroid;
     string warning = "ASTEROIDS INBOUND";
     string warning2 = "DAMAGED RADAR";
@@ -23,7 +23,6 @@ public class asteroids : MonoBehaviour
     public bool asteroidss = false;
     public bool darkness = false;
     public GameObject lights;
-    SerializedProperty intense;
     private void Start()
     {
         eventtimer = eventrepeat;
@@ -32,7 +31,7 @@ public class asteroids : MonoBehaviour
     void Update()
     {
         starttimer -= Time.deltaTime;
-        repeattimer -= Time.deltaTime;
+        repeattimer -= Time.unscaledDeltaTime;
         if (starttimer < 0)
         {
             eventtimer -= Time.deltaTime;

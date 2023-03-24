@@ -9,12 +9,13 @@ public class Timer : MonoBehaviour
 {
     float timer;
     Text text;
-    float seconds;
+    public float seconds;
     public bool alive = true;
     bool reset = false;
     GameObject highscore;
     public GameObject restart;
     public GameObject enemy;
+    public GameObject boss;
     void Start()
     {
         text = gameObject.GetComponent<Text>();
@@ -49,6 +50,9 @@ public class Timer : MonoBehaviour
         }
         else
         {
+            boss.transform.position = new Vector2(2.7f, 0.0f);
+            boss.SetActive(true);
+            seconds = 0;
             reset = true;
             restart.SetActive(true);
         }
